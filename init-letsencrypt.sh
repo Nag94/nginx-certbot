@@ -1,6 +1,6 @@
 #!/bin/bash
 
-domains=(theautomation.nl www.theautomation.nl homeassistant.theautomation.nl cloud.theautomation.nl bitwarden.theautomation.nl jenkins.theautomation.nl docker-registry.theautomation.nl drone.theautomation.nl)
+domains=(theautomation.nl www.theautomation.nl homeassistant.theautomation.nl cloud.theautomation.nl bitwarden.theautomation.nl docker-registry.theautomation.nl drone.theautomation.nl)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="c.stam.mail@gmail.com" # Adding a valid address is strongly recommended

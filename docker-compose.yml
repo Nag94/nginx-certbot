@@ -1,8 +1,9 @@
+---
 version: '3.8'
 services:
 
   prd-nginx-app:
-    image: nginx:1.15-alpine
+    image: docker-registry.theautomation.nl/coen/prd-nginx-app:latest
     container_name: prd-nginx-app
     restart: unless-stopped
     volumes:
@@ -15,8 +16,9 @@ services:
       - "80:80"
       - "443:443"
     command: "/bin/sh -c 'while :; do sleep 6h & wait $${!}; nginx -s reload; done & nginx -g \"daemon off;\"'"
+
   prd-certbot-app:
-    image: certbot/certbot
+    image: docker-registry.theautomation.nl/coen/prd-certbot-app:latest
     container_name: prd-certbot-app
     restart: unless-stopped
     volumes:
@@ -42,4 +44,5 @@ networks:
     ipam:
       config:
         - subnet: 172.20.0.0/16
+
 
