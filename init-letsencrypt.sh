@@ -1,10 +1,10 @@
 #!/bin/bash
 
-domains=(theautomation.nl www.theautomation.nl homeassistant.theautomation.nl cloud.theautomation.nl bitwarden.theautomation.nl docker-registry.theautomation.nl drone.theautomation.nl)
+domains=(theautomation.nl homeassistant.theautomation.nl bitwarden.theautomation.nl docker-registry.theautomation.nl drone.theautomation.nl)
 rsa_key_size=4096
 data_path="./data/certbot"
 email="c.stam.mail@gmail.com" # Adding a valid address is strongly recommended
-staging=0 # Set to 1 if you're testing your setup to avoid hitting request limits
+staging=1 # Set to 1 if you're testing your setup to avoid hitting request limits
 
 if ! [ -x "$(command -v docker-compose)" ]; then
   echo 'Error: docker-compose is not installed.' >&2
