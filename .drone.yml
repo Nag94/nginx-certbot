@@ -22,18 +22,6 @@ depends_on:
   - validate
 
 steps:
-  - name: publish certbot
-    image: plugins/docker
-    settings:
-      username:
-        from_secret: docker-registry-username
-      password:
-        from_secret: docker-registry-password
-      registry: docker-registry.theautomation.nl
-      repo: docker-registry.theautomation.nl/coen/prd-${DRONE_REPO_NAME}-app
-      dockerfile: Dockerfile-certbot
-      auto_tag: true
-
   - name: publish nginx
     image: plugins/docker
     settings:
@@ -42,8 +30,20 @@ steps:
       password:
         from_secret: docker-registry-password
       registry: docker-registry.theautomation.nl
-      repo: docker-registry.theautomation.nl/coen/prd-${DRONE_REPO_NAME}-db
+      repo: docker-registry.theautomation.nl/coen/prd-nginx-app
       dockerfile: Dockerfile-nginx
+      auto_tag: true
+
+  - name: publish certbot
+    image: plugins/docker
+    settings:
+      username:
+        from_secret: docker-registry-username
+      password:
+        from_secret: docker-registry-password
+      registry: docker-registry.theautomation.nl
+      repo: docker-registry.theautomation.nl/coen/prd-certbot-app
+      dockerfile: Dockerfile-certbot
       auto_tag: true
 
 ---
