@@ -1,3 +1,2 @@
-/data/certbot/conf/**
-!/data/certbot/conf/options-ssl-nginx.conf
-!/data/certbot/conf/ssl-dhparams.pem
+/nginx_secrets
+prd-nginx-certbot-app.env
