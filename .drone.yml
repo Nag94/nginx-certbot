@@ -23,7 +23,7 @@ depends_on:
   - validate
 
 steps:
-  - name: publish nginx
+  - name: publish
     image: plugins/docker
     settings:
       username:

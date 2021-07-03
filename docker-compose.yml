@@ -3,7 +3,7 @@ version: '3.8'
 services:
 
   nginx:
-    image: jonasal/nginx-certbot:latest
+    image: docker-registry.theautomation.nl/coen/prd-nginx-certbot-app:latest
     container_name: prd-nginx-certbot-app
     restart: unless-stopped
     env_file: prd-nginx-certbot-app.env
