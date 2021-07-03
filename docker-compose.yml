@@ -19,9 +19,9 @@ services:
 # NETWORKS
 networks:
 
-    home-services:
-      driver: bridge
-      name: home-services
-      ipam:
-        config:
-          - subnet: 172.20.0.0/16
+  home-services:
+    driver: bridge
+    name: home-services
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
