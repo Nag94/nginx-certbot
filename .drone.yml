@@ -23,7 +23,7 @@ steps:
     image: jonasal/nginx-certbot:latest
     pull: always
     commands:
-      - cp -R user_conf.d/ /etc/nginx/user_conf.d/
+      - cp -r user_conf.d/* /etc/nginx/user_conf.d/
       - nginx -t
 
 ---
