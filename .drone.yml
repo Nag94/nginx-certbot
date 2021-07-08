@@ -26,7 +26,7 @@ steps:
     commands:
       - cp user_conf.d/local.conf /etc/nginx/user_conf.d/
       - cat /etc/nginx/user_conf.d/local.conf
-      - nginx -t
+      - nginx -t -c /etc/nginx/user_conf.d/local.conf
 
 ---
 kind: pipeline
