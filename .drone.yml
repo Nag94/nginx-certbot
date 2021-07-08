@@ -9,7 +9,7 @@ steps:
       - yamllint -c ./.yamllint .
 
   - name: docker-compose
-    image: tmaier/docker-compose:latest
+    image: docker-registry.theautomation.nl/coen/prd-nginx-certbot-app:latest
     commands:
       - mv prd-nginx-certbot-app.env.example prd-nginx-certbot-app.env
       - docker-compose config -q
