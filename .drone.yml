@@ -24,8 +24,8 @@ steps:
     image: jonasal/nginx-certbot:latest
     pull: always
     commands:
-      - cp -a /drone/src/user_conf.d/. /etc/nginx/conf.d/
-      - nginx -t
+      - cp -a /drone/src/conf.d/. /etc/nginx/conf.d/
+      #- nginx -t
 
 ---
 kind: pipeline
