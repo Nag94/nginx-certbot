@@ -1,3 +1,5 @@
 FROM jonasal/nginx-certbot:latest
 
-COPY includes/options-ssl-nginx.conf /usr/local/
+COPY conf.d/* /etc/nginx/conf.d/
+
+# HEALTHCHECK CMD service nginx status || exit 1

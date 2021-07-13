@@ -14,7 +14,6 @@ services:
       - home-services
     volumes:
       - ./nginx_secrets:/etc/letsencrypt
-      - ./user_conf.d:/etc/nginx/user_conf.d
 
 # NETWORKS
 networks:
