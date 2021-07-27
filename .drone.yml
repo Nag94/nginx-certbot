@@ -26,8 +26,7 @@ steps:
     commands:
       - cp -a ./conf.d/. /etc/nginx/conf.d/
       - mkdir -p /etc/letsencrypt/live/theautomation.nl/
-      - openssl genrsa > /etc/letsencrypt/live/theautomation.nl/privkey.pem
-      - openssl req -new -x509 -key privkey.pem > /etc/letsencrypt/live/theautomation.nl/fullchain.pem
+      - sudo openssl req -x509 -sha256 -nodes -newkey rsa:2048 -days 365 -subj "/C=US/ST=Oregon/L=Portland/O=Company Name/OU=Org/CN=localhost" -keyout /etc/letsencrypt/live/theautomation.nl/privkey.pem -out /etc/letsencrypt/live/theautomation.nl/fullchain.pem
       - nginx -t
 
 ---
