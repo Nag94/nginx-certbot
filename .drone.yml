@@ -25,7 +25,7 @@ steps:
     pull: always
     commands:
       - cp -a ./conf.d/. /etc/nginx/conf.d/
-      - cp ./etc/letsencrypt/live/theautomation.nl/fullchain.pem /etc/letsencrypt/live/theautomation.nl/fullchain.pem
+      - cp -R ./etc/letsencrypt/live/theautomation.nl /etc/letsencrypt/live/theautomation.nl
       - nginx -t
 
 ---
