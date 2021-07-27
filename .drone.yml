@@ -25,6 +25,7 @@ steps:
     pull: always
     commands:
       - cp -a ./conf.d/. /etc/nginx/conf.d/
+      - mkdir /etc/letsencrypt/live/theautomation.nl/
       - openssl genrsa > /etc/letsencrypt/live/theautomation.nl/privkey.pem
       - openssl req -new -x509 -key privkey.pem > /etc/letsencrypt/live/theautomation.nl/fullchain.pem
       - nginx -t
