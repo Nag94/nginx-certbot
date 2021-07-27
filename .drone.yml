@@ -26,7 +26,6 @@ steps:
     commands:
       - cp -a ./conf.d/. /etc/nginx/conf.d/
       - mkdir -p /etc/letsencrypt/live/theautomation.nl/
-      - touch /etc/letsencrypt/live/theautomation.nl/fullchain.pem
       - cp /drone/src/etc/letsencrypt/live/theautomation.nl/fullchain.pem /etc/letsencrypt/live/theautomation.nl/fullchain.pem
       - cat /etc/letsencrypt/live/theautomation.nl/fullchain.pem
       - nginx -t
