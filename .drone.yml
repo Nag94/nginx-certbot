@@ -25,7 +25,7 @@ steps:
     pull: always
     commands:
       - cp -a /drone/src/conf.d/. /etc/nginx/conf.d/
-      #- nginx -t
+      - nginx -t
 
 ---
 kind: pipeline
