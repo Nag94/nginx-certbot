@@ -27,7 +27,7 @@ steps:
       - name: certs
         path: /etc/letsencrypt/live/
     commands:
-      # - cp -a ./conf.d/. /etc/nginx/conf.d/
+      - cp -a ./conf.d/. /etc/nginx/conf.d/
       - cd /etc/letsencrypt/live/
       - ls
       - cd /etc/nginx/conf.d/
