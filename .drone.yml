@@ -22,7 +22,7 @@ name: test
 steps:
   - name: check config
     image: jonasal/nginx-certbot:latest
-    user: 0
+    user: root
     pull: always
     volumes:
       - name: certs
