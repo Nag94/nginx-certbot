@@ -39,7 +39,7 @@ steps:
 volumes:
   - name: certs
     host:
-      path: /home/coen/docker-home-services/nginx-certbot/nginx_secrets/live/
+      path: /var/lib/docker/volumes/prd-nginx-certbot-app/_data/live/
 
 ---
 kind: pipeline
