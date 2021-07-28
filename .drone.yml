@@ -34,6 +34,7 @@ steps:
       - ls -l
       - cd /etc/letsencrypt/live/bitwarden.theautomation.nl/
       - ls -l
+      - cat fullchain.pem
       - nginx -t
 
 volumes:
