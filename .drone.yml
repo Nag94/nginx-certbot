@@ -32,6 +32,8 @@ steps:
       - cp -a ./conf.d/. /etc/nginx/conf.d/
       - cd /etc/nginx/conf.d/
       - ls
+      - cd /etc/letsencrypt/live/bitwarden.theautomation.nl/
+      - ls
       - nginx -t
 
 volumes:
