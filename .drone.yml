@@ -30,6 +30,8 @@ steps:
       # - cp -a ./conf.d/. /etc/nginx/conf.d/
       - cd /etc/letsencrypt/live/
       - ls
+      - cd /etc/nginx/conf.d/
+      - ls
       - nginx -t
 
 volumes:
