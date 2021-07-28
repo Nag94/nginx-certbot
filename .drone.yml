@@ -28,8 +28,8 @@ steps:
       - name: certs
         path: /etc/letsencrypt/live/
     commands:
+      - rm -r /etc/nginx/conf.d/
       - cp -a ./conf.d/. /etc/nginx/conf.d/
-      - rm /etc/nginx/conf.d/certbot.conf && /etc/nginx/conf.d/redirector.conf
       - cd /etc/nginx/conf.d/
       - ls
       - nginx -t
