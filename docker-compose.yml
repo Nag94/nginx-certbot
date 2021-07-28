@@ -1,7 +1,6 @@
 ---
-version: '3.8'
+version: "3.8"
 services:
-
   nginx:
     image: docker-registry.theautomation.nl/coen/prd-nginx-certbot-app:latest
     container_name: prd-nginx-certbot-app
@@ -18,7 +17,6 @@ services:
 
 # NETWORKS
 networks:
-
   home-services:
     driver: bridge
     name: home-services

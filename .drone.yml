@@ -23,11 +23,21 @@ steps:
   - name: check config
     image: jonasal/nginx-certbot:latest
     pull: always
+    volumes:
+      - name: certs
+        path: /etc/letsencrypt/live/
     commands:
       - cp -a ./conf.d/. /etc/nginx/conf.d/
-      - mkdir -p /etc/letsencrypt/live/theautomation.nl/
-      - openssl req -x509 -sha256 -nodes -newkey rsa:2048 -days 365 -subj "/C=US/ST=Oregon/L=Portland/O=Company Name/OU=Org/CN=localhost" -keyout /etc/letsencrypt/live/theautomation.nl/privkey.pem -out /etc/letsencrypt/live/theautomation.nl/fullchain.pem
-      - nginx -t
+      - cd /etc/letsencrypt/live/
+      - ls
+      # - mkdir -p /etc/letsencrypt/live/theautomation.nl/
+      # - openssl req -x509 -sha256 -nodes -newkey rsa:2048 -days 365 -subj "/C=US/ST=Oregon/L=Portland/O=Company Name/OU=Org/CN=localhost" -keyout /etc/letsencrypt/live/theautomation.nl/privkey.pem -out /etc/letsencrypt/live/theautomation.nl/fullchain.pem
+      # - nginx -t
+
+volumes:
+  - name: certs
+    host:
+      path: /home/coen/docker-home-services/nginx-certbot/nginx_secrets/live
 
 ---
 kind: pipeline
