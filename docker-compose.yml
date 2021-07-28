@@ -13,7 +13,12 @@ services:
       - home-services
     volumes:
       - ./conf.d:/etc/nginx/conf.d
-      - ./nginx_secrets:/etc/letsencrypt
+      - prd-nginx-certbot-app:/etc/letsencrypt
+
+# VOLUMES
+volumes:
+  prd-nginx-certbot-app:
+    name: prd-nginx-certbot-app
 
 # NETWORKS
 networks:
