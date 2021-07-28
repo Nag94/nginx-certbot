@@ -31,15 +31,15 @@ steps:
       - rm -r /etc/nginx/conf.d/
       - cp -a ./conf.d/. /etc/nginx/conf.d/
       - cd /etc/nginx/conf.d/
-      - ls
+      - ls -l
       - cd /etc/letsencrypt/live/bitwarden.theautomation.nl/
-      - ls
+      - ls -l
       - nginx -t
 
 volumes:
   - name: certs
     host:
-      path: /home/coen/docker-home-services/nginx-certbot/nginx_secrets/live
+      path: /home/coen/docker-home-services/nginx-certbot/nginx_secrets/live/
 
 ---
 kind: pipeline
