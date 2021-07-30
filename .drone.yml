@@ -33,7 +33,7 @@ steps:
       - cd /etc/nginx/conf.d/
       - ls -l
       - cd /etc/letsencrypt/
-      - ls -l
+      - ls
       - cat ./fullchain.pem
       - nginx -t
 
