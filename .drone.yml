@@ -35,7 +35,7 @@ steps:
 volumes:
   - name: certs
     host:
-      path: /home/coen/docker-home-services/nginx-certbot/nginx_secrets/
+      path: /etc/letsencrypt/
 
 ---
 kind: pipeline
