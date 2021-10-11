@@ -1,2 +1,2 @@
-/nginx_secrets
+/etc/letsencrypt
 prd-nginx-certbot-app.env
