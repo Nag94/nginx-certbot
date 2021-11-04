@@ -10,16 +10,15 @@ services:
       - 80:80
       - 443:443
     networks:
-      - home-services
+      - reverse-proxy
     volumes:
       - ./conf.d:/etc/nginx/conf.d
       - /etc/letsencrypt:/etc/letsencrypt
 
-# NETWORKS
 networks:
-  home-services:
+  reverse-proxy:
     driver: bridge
-    name: home-services
+    name: reverse-proxy
     ipam:
       config:
-        - subnet: 172.20.0.0/16
+        - subnet: 172.22.0.0/16
