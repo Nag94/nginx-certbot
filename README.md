@@ -7,4 +7,4 @@
 
 [Nginx](https://www.nginx.com/): using this a reverse proxy which takes the client request, passes it on to one or more servers, and subsequently delivers the server's response back to the clients.
 
-[Certbot](https://www.nginx.com/): a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites to enable HTTPS.
+[Certbot](https://www.nginx.com/): a free, open source software tool for automatically using Let’s Encrypt certificates on manually-administrated websites and services to enable HTTPS.
